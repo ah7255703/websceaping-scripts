@@ -64,12 +64,14 @@ class Anime4UP():
 
                 anime_status_ar = item.find(
                     'div', class_='anime-card-status').find('a').text.strip()
+                anime_image = item.find(
+                    'img', class_='img-responsive').get('src')
                 try:
                     anime_status = self.__anime_status[anime_status_ar]
                 except:
                     anime_status = anime_status_ar
                 search_result = {'index': i+1, 'Title': anime_title,
-                                 'Type': anime_type, 'Link': anime_link, 'Status': anime_status}
+                                 'Type': anime_type, 'Link': anime_link, 'Status': anime_status, "Preview image": anime_image}
                 search_results.append(search_result)
                 yield search_result
 
