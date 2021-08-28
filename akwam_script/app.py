@@ -10,6 +10,6 @@ try:
         Fire(Akwam)
         t2 = time.time()
         print(
-            f'{Fore.GREEN}[*]{Style.RESET_ALL} Executed in {Fore.RED}{int(t2-t1)} {Style.RESET_ALL}Second(s) \n')
+            f'{Fore.GREEN}[*]{Style.RESET_ALL} Executed in {Fore.RED}{round(t2-t1,3)} {Style.RESET_ALL}Second(s) \n')
 except KeyboardInterrupt:
     print(f'\n{Fore.RED}[*] {Fore.BLUE}Terminated By The User')
